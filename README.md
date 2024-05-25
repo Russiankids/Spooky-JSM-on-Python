@@ -2,7 +2,7 @@ Hi everyone, I've been doing this project for about two weeks and killed more th
 
 Not all monsters have been implemented due to the fact that most of the monsters are made on a three-dimensional basis or they are useless.
 
-Spooky Jumpscare Mansion 2D Demake!
+Spooky's Jumpscare Mansion 2D Demake!
 
 Russian \ English support
 
