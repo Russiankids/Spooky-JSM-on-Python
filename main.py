@@ -34,6 +34,8 @@ Door = pygame.image.load('DoorTriger.png')
 Beef_png = pygame.image.load('ezgif-3-ff66a457af.png')
 Beef_png2 = pygame.image.load('ezgif-1-096bfc2334.png')
 Heart = pygame.image.load('ezgif-6-54f6e96153.png')
+Icon = pygame.image.load('menu_tex.png')
+pygame.display.set_icon(Icon)
 Slow = 6
 Stamine = 400
 Speed = 5
@@ -136,11 +138,13 @@ while running:
             stamine_weight -= 5
     if keys[pygame.K_h] and keys[pygame.K_e] and keys[pygame.K_l] and keys[pygame.K_p]:
         health = 100
+        Fps = 24
         video = moviepy.editor.VideoFileClip("Mesmerizer.mp4")
         video.preview()
         pygame.quit()
     if keys[pygame.K_w] and keys[pygame.K_a] and keys[pygame.K_y]:
         health = 100
+        Fps = 24
         video = moviepy.editor.VideoFileClip("SillyBilly.mp4")
         video.preview()
         pygame.quit()
@@ -162,9 +166,6 @@ while running:
         Healing.set_volume(0.1)
         Healing.play()
         Ambience_2.play()
-    if keys[pygame.K_k]:
-        text = room_font.render('Этот испанец сделал столько, сколько в тесле нужен бензин(Николай)', True, (0, 0, 0))
-        flag_Spain_help = True
     if keys[pygame.K_b] and keys[pygame.K_e] and keys[pygame.K_a] and keys[pygame.K_r]:
         video = moviepy.editor.VideoFileClip("Мем с медведем который подходит к камере ОАОАООАОАОАОАОРАА-(480p).mp4")
         video.preview()
@@ -222,9 +223,15 @@ while running:
     if X >= Door_triger_S:
         if no_tips == False:
             if lang == 1:
-                tips = door_font.render('To open door press E', True, (0, 0, 0))
+                if Rooms_desinge == 3 or Rooms_desinge == 8 or Rooms_desinge == 5 or Rooms_desinge == 10:
+                    tips = door_font.render('To open door press E', True, (255, 255, 255))
+                else:
+                    tips = door_font.render('To open door press E', True, (0, 0, 0))
             if lang == 2:
-                tips = door_font.render('Дверь открыть на E', True, (0, 0, 0))
+                if Rooms_desinge == 3 or Rooms_desinge == 8 or Rooms_desinge == 5 or Rooms_desinge == 10:
+                    tips = door_font.render('Дверь открыть на E', True, (255, 255, 255))
+                else:
+                    tips = door_font.render('Дверь открыть на E', True, (0, 0, 0))
             flag_Door_help = True
     # Отрисовка
     # Cчётчик Дверей
@@ -319,8 +326,6 @@ while running:
     screen.blit(Door, (850, 500))
     screen.blit(Character, (X, Y))
     # Приколы с помощью
-    if flag_Spain_help == True:
-        screen.blit(text, (200, 300))
     if flag_Door_help == True:
         screen.blit(tips, (700, 400))
         flag_Door_help = False
@@ -391,7 +396,7 @@ while running:
             beaver_appear_widht -= 6
         else:
             beaver_appear_widht += 6
-        if beaver_appear_widht == X - 50 or beaver_appear_widht == X:
+        if beaver_appear_widht == X - 25 or beaver_appear_widht == X - 50 or beaver_appear_widht == X:
             health -= 15
             screen.fill((255, 0, 0))
         if health <= 0:
