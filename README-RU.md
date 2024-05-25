@@ -9,3 +9,5 @@ Spooky's Jumpscare Mansion 2D Демейк!
 Python 3.x, Pygame 2.5.x, Moviepy 1.0.3
 
 Можно использовать и модифицировать бесплатно
+
+Чит-код при запуске:567256
