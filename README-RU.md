@@ -4,7 +4,7 @@
 
 Spooky's Jumpscare Mansion 2D Демейк!
 
-Поддержка на русском и английском языках
+Поддержка на русского и английского
 
 Python 3.x, Pygame 2.5.x, Moviepy 1.0.3
 
