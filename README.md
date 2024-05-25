@@ -9,5 +9,3 @@ Russian \ English support
 Python 3.x, Pygame 2.5.x, Moviepy 1.0.3
 
 Free to use and modify
-
-#python #pygame #demake
