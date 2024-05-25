@@ -18,7 +18,7 @@ if lang == 2:
     if Endless == 'F':
         Endless = 'False'
 if lang == 567256:
-    lang = 2
+    lang = 1
     print('Dev mode is ON, please wait...')
     Endless = input('Do you want to play in Endless mode? True/False: ')
     if Endless == 'T':
