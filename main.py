@@ -372,7 +372,9 @@ while running:
             health -= 0.1
             Beef_Attack.stop()
             pygame.draw.rect(screen, (255, 0, 0), (0, 0, 900, 900))
-            if X == 600:
+            if X >= 600:
+                Door_triger_E = 950
+                Door_triger_S = 950
                 if lang == 1:
                     print(f'{Timer} how long have you lived')
                 if lang == 2:
@@ -388,7 +390,7 @@ while running:
         Rooms_desinge = 8
         Attacking = True
         number_frame_beaver = beaver_number_iter // 6 % 4
-        screen.blit(img_list_beaver[number_frame_beaver], (beaver_appear_widht, 420))
+        screen.blit(img_list_beaver[number_frame_beaver], (beaver_appear_widht, 430))
         Ambience_2.stop()
         Beaver_Attack.set_volume(0.1)
         Beaver_Attack.play()
@@ -401,17 +403,22 @@ while running:
             screen.fill((255, 0, 0))
         if health <= 0:
             health -= 0.1
+            beaver_appear_widht += 1.5
+            if X != beaver_appear_widht:
+                X = beaver_appear_widht
+            Door_triger_E = 950
+            Door_triger_S = 950
             Beaver_Attack.stop()
             Ambience_2.stop()
-            if X == 600:
+            if X >= 850:
                 health -= 0.1
-                X+=1
                 if lang == 1:
                     print(f'{Timer} how long have you lived')
                 if lang == 2:
                     print(f'{Timer} это сколько ты прожил')
                 video = moviepy.editor.VideoFileClip("0518.mp4")
                 video.preview()
+                pygame.quit()
     else:
         Attacking = False
         Ambience_2.play()
@@ -461,6 +468,5 @@ while running:
             Character = pygame.image.load('Character.png')
             Ambience_2.play()
     screen.blit(rooms_apper, (700, 0))
-    print(Rooms_desinge)
     pygame.display.flip()
 pygame.quit()
