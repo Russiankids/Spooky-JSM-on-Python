@@ -8,23 +8,23 @@ lang = int(input('Enter the language: 1 - English, 2 - Russian '))
 if lang == 1:
     Endless = input('Do you want to play in Endless mode? True/False: ')
     if Endless == 'T':
-        Endless = True
+        Endless = 'True'
     if Endless == 'F':
-        Endless = False
+        Endless = 'False'
 if lang == 2:
     Endless = input('Вы хотите играть в режиме Бесконечности? True/False: ')
     if Endless == 'T':
-        Endless = True
+        Endless = 'True'
     if Endless == 'F':
-        Endless = False
+        Endless = 'False'
 if lang == 567256:
     lang = 2
     print('Dev mode is ON, please wait...')
     Endless = input('Do you want to play in Endless mode? True/False: ')
     if Endless == 'T':
-        Endless = True
+        Endless = 'True'
     if Endless == 'F':
-        Endless = False
+        Endless = 'False'
     room = int(input('Enter room number: '))
 else:
     room = 0
