@@ -1,4 +1,4 @@
-# 2  Часть Исскуственный Интеллект
+# 3 END
 import pygame
 import random
 import moviepy.editor
@@ -10,7 +10,7 @@ if lang == 1:
 if lang == 2:
     Endless = input('Вы хотите играть в режиме Бесконечности? True/False: ')
 if lang == 567256:
-    lang = 1
+    lang = 2
     print('Dev mode is ON, please wait...')
     Endless = input('Do you want to play in Endless mode? True/False: ')
     room = int(input('Enter room number: '))
